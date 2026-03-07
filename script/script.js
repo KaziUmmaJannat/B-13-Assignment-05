@@ -1,15 +1,19 @@
+function signin(){
 
-// function login(){
-//     const userInput = document.getElementById("username").value;
-//     const passInput = document.getElementById("password").value;
-//     const usernames = ["admin"];
-//     const passwords = ["admin123"];
+let username = document.getElementById("username").value
+let password = document.getElementById("password").value
 
-//     for(let i = 0; i < usernames.length; i++){
-//         if(userInput === usernames[i] && passInput === passwords[i]){
-//             alert("Login Successful");
-//             return;
-//         }
-//     }
-//     alert(" Invalid Username or Password");
-// }
+if(username === "admin" && password === "admin123"){
+
+alert("Login Successful")
+
+window.location.href = "dashboard.html"
+
+}
+else{
+
+alert("Wrong Username or Password")
+
+}
+
+}
