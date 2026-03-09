@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,10 +25,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Css -->
-    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
+    <!-- navbar -->
     <header>
         <div class="navbar bg-base-100 shadow-sm flex flex-col lg:flex-row gap-4 ">
             <div class="flex-1">
@@ -39,15 +41,16 @@
                 <div class="dropdown dropdown-end">
                     <div>
                         <div>
-                            <button id="btn-srh" class="btn btn-primary text-white">+ New Issue</button>
+                            <button id="btn-srh"class="btn btn-primary">+ New Issue</button>
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
-
     </header>
+
+    <!-- Banner Button  -->
     <section class="w-11/12 mx-auto mt-12">
         <div class="banner-btn-container space-x-3 shadow-md p-5 rounded-sm ">
             <button id="all-btn" class="btn btn-soft btn-primary active">All</button>
@@ -55,12 +58,14 @@
             <button id="closed-btn" class="btn btn-soft btn-primary">Close</button>
 
         </div>
-        
     </section>
+
+
+    <!-- Banner Section -->
     <section class="w-11/12 mx-auto mt-12 flex justify-between items-center shadow-md p-5 rounded-sm ">
         <div class="left-side flex items-center gap-2">
             <div>
-                <img src="../assets/Aperture.png" alt="">
+                <img src="./assets/Aperture.png" alt="">
             </div>
             <div>
                 <p id="banner-p" class="font-bold text-2xl">50 Issues</p>
@@ -71,24 +76,30 @@
 
         <div class="right-side flex items-center gap-4">
             <div class="flex items-center gap-1">
-                <img src="../assets/Open-Status.png" alt="">
+                <img src="./assets/Open-Status.png" alt="">
                 <p>Open</p>
             </div>
 
             <div class="flex items-center gap-1">
-                <img src="../assets/Closed- Status .png" alt="">
+                <img src="./assets/Closed- Status .png" alt="">
                 <p>Close</p>
             </div>
 
         </div>
 
     </section>
+
+
     <section id="spinner" 
     class="flex justify-center items-center py-10 hidden ">
 
         <span class="loading loading-spinner text-success"></span>
 
     </section>
+   
+
+
+    <!-- Card Container -->
     <section class="w-11/12 mx-auto mt-12 shadow-md p-5 rounded-sm ">
         <div id="issue-container" class="card-container grid grid-cols-1 lg:grid-cols-4 gap-5">
 
@@ -97,9 +108,14 @@
         </div>
 
     </section>
+
     <section id="empty-issue " class="hidden">
         
     </section>
+
+
+
+    <!-- Open Section -->
     <section class="w-11/12 mx-auto mt-12 shadow-md p-5 rounded-sm ">
         <div id="open-issue-container" class=" grid grid-cols-1 lg:grid-cols-4 gap-5">
 
@@ -108,22 +124,27 @@
 
     </section>
 
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
             <div  id="issue-details" >
 
               
+
+
             </div>
 
             <div class="modal-action">
                 <form method="dialog">
-                    
+                    <!-- if there is a button in form, it will close the modal -->
                     <button class="btn btn-soft btn-primary">Close</button>
                 </form>
             </div>
         </div>
     </dialog>
-   <script src="../script/dashboard.js"></script>
+
+    <script src="./JS/main.js"></script>
 </body>
 
 </html>
