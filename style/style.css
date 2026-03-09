@@ -8,3 +8,7 @@
 .logo img{
     margin: auto;
 }
+.active{
+    background-color: #4A00FF !important;
+    color: white !important;
+}
